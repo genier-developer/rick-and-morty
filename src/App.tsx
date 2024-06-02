@@ -1,10 +1,11 @@
 import './App.css'
+import {CharacterCard} from "./components/CharacterCard.tsx";
 
 function App() {
 
     return (
-        <div>
-        </div>
+        <CharacterCard character={}>
+        </CharacterCard>
     )
 }
 
