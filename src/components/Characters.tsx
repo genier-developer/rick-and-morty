@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useGetCharactersQuery } from '../services/rickAndMortyApi';
 import {CharacterCard} from './CharacterCard';
 import Pagination from './Pagination';
+import {Character} from "../types/Character.ts";
 
 interface Filters {
     name: string;
@@ -19,7 +20,7 @@ const Characters: React.FC<{ filters: Filters }> = ({ filters }) => {
     return (
         <div>
             <div className="characters">
-                {data.results.map((character: any) => (
+                {data.results.map((character: Character) => (
                     <CharacterCard key={character.id} character={character} />
                 ))}
             </div>
