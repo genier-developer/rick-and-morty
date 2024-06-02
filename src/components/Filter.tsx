@@ -1,17 +1,17 @@
-import React, {useState} from "react";
+import React, { useState } from 'react';
 
-export type Filter = {
-    name: string
-    status: string
+interface Filters {
+    name: string;
+    status: string;
 }
 
-const Filter: React.FC<{ setFilters: (filters: Filter) => void }> = ({setFilters}) => {
-    const [name, setName] = useState('')
-    const [status, setStatus] = useState('')
+const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ setFilters }) => {
+    const [name, setName] = useState('');
+    const [status, setStatus] = useState('');
 
     const handleApplyFilters = () => {
         setFilters({ name, status });
-    }
+    };
 
     return (
         <div className="filter">
@@ -29,7 +29,7 @@ const Filter: React.FC<{ setFilters: (filters: Filter) => void }> = ({setFilters
             </select>
             <button onClick={handleApplyFilters}>Apply</button>
         </div>
-    )
+    );
 };
 
 export default Filter;

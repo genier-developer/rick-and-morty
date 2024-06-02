@@ -1,5 +1,5 @@
 import {configureStore} from "@reduxjs/toolkit";
-import {rickAndMortyApi} from "./api/rickAndMortyApi.ts";
+import {rickAndMortyApi} from "./services/rickAndMortyApi.ts";
 
 export const store = configureStore({
     reducer: {
