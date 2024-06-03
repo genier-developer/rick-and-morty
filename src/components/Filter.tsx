@@ -5,7 +5,7 @@ interface Filters {
     status: string;
 }
 
-const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ setFilters }) => {
+export const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ setFilters }) => {
     const [name, setName] = useState('');
     const [status, setStatus] = useState('');
 
@@ -32,4 +32,3 @@ const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ setFilte
     );
 };
 
-export default Filter;

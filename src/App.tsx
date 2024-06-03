@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Characters from './components/Characters';
-import Filter from './components/Filter';
+import {Filter} from './components/Filter';
 import './App.css';
 
 const App: React.FC = () => {
