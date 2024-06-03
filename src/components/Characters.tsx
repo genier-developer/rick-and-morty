@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useGetCharactersQuery } from '../services/rickAndMortyApi';
 import {CharacterCard} from './CharacterCard';
-import Pagination from './Pagination';
+import {Pagination} from './Pagination';
 import {Character} from "../types/Character.ts";
 
 interface Filters {
