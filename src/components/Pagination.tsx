@@ -6,7 +6,7 @@ export type Pagination = {
     totalPages: number;
 }
 
-const Pagination: React.FC<Pagination> = ({ page, setPage, totalPages }) => {
+export const Pagination: React.FC<Pagination> = ({ page, setPage, totalPages }) => {
     return (
         <div className="pagination">
             <button onClick={() => setPage(page - 1)} disabled={page === 1}>
@@ -22,4 +22,3 @@ const Pagination: React.FC<Pagination> = ({ page, setPage, totalPages }) => {
     );
 };
 
-export default Pagination;
