@@ -20,11 +20,14 @@ const Characters: React.FC<{ filters: Filters }> = ({ filters }) => {
     return (
         <div>
             <div className="characters">
-                {data.results.map((character: Character) => (
+                {data?.results.map((character: Character) => (
                     <CharacterCard key={character.id} character={character} />
                 ))}
             </div>
-            <Pagination page={page} setPage={setPage} totalPages={data.info.pages} />
+            {
+                data && <Pagination page={page} setPage={setPage} totalPages={data.info.pages} />
+            }
+
         </div>
     );
 };

@@ -1,22 +1,6 @@
 import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
+import {CharactersResponse} from "../types/Character.ts";
 
-
-interface CharactersResponse {
-    info: {
-        count: number;
-        pages: number;
-        next: string | null;
-        prev: string | null;
-    };
-    results: Character[];
-}
-
-interface Character {
-    id: number;
-    name: string;
-    status: string;
-    image: string;
-}
 export const rickAndMortyApi = createApi({
     reducerPath: 'rickAndMortyApi',
     baseQuery: fetchBaseQuery({baseUrl: 'https://rickandmortyapi.com/api'}),
