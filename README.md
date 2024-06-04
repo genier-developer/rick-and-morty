@@ -1,6 +1,6 @@
 # Rick and Morty Viewer
 
-This project is a web application for viewing characters from the TV show "Rick and Morty" using the open [Rick and Morty API](https://rickandmortyapi.com/). The application is built using Vite, React, TypeScript, RTK Query, and Material-UI (MUI).
+This project is a web application for viewing characters from the TV show "Rick and Morty" using the open [Rick and Morty API](https://rickandmortyapi.com/). The application is built using Vite, React, TypeScript, RTK Query.
 
 ## Features
 
