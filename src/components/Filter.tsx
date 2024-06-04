@@ -22,7 +22,7 @@ export const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ s
                 onChange={(e) => setName(e.target.value)}
             />
             <select value={status} onChange={(e) => setStatus(e.target.value)}>
-                <option value="">Status</option>
+                <option value="">Choose status</option>
                 <option value="alive">Alive</option>
                 <option value="dead">Dead</option>
                 <option value="unknown">Unknown</option>
