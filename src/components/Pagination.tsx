@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button, Typography} from "@mui/material";
 
 export type Pagination = {
     page: number;
@@ -9,15 +10,15 @@ export type Pagination = {
 export const Pagination: React.FC<Pagination> = ({ page, setPage, totalPages }) => {
     return (
         <div className="pagination">
-            <button onClick={() => setPage(page - 1)} disabled={page === 1}>
+            <Button variant={'contained'} onClick={() => setPage(page - 1)} disabled={page === 1}>
                 Previous
-            </button>
-            <span>
+            </Button>
+            <Typography variant={'h5'}>
         Page {page} of {totalPages}
-      </span>
-            <button onClick={() => setPage(page + 1)} disabled={page === totalPages}>
+      </Typography>
+            <Button variant={'contained'} onClick={() => setPage(page + 1)} disabled={page === totalPages}>
                 Next
-            </button>
+            </Button>
         </div>
     );
 };

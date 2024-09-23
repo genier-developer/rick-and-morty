@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Select, TextField, Button, MenuItem, FormControl, InputLabel} from "@mui/material";
 
 interface Filters {
     name: string;
@@ -15,19 +16,22 @@ export const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ s
 
     return (
         <div className="filter">
-            <input
-                type="text"
-                placeholder="Name"
+            <TextField
+                size={'small'}
+                variant="outlined"
+                placeholder={'Enter character name'}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
-            <select value={status} onChange={(e) => setStatus(e.target.value)}>
-                <option value="">Choose status</option>
-                <option value="alive">Alive</option>
-                <option value="dead">Dead</option>
-                <option value="unknown">Unknown</option>
-            </select>
-            <button onClick={handleApplyFilters}>Apply</button>
+            <FormControl size={'small'} sx={{m: 1, minWidth: 120 }}>
+                <InputLabel id="demo-simple-select-label">Choose status</InputLabel>
+                <Select value={status} label={'Choose status'} onChange={(e) => setStatus(e.target.value)}>
+                <MenuItem value="alive">Alive</MenuItem>
+                <MenuItem value="dead">Dead</MenuItem>
+                <MenuItem value="unknown">Unknown</MenuItem>
+                </Select>
+                </FormControl>
+            <Button variant={'contained'} onClick={handleApplyFilters}>Apply</Button>
         </div>
     );
 };

@@ -1,7 +1,11 @@
 .App {
   text-align: center;
-}
 
+}
+.typography {
+  color: darkslategray;
+  font-weight: 700;
+}
 .characters {
   display: flex;
   flex-wrap: wrap;
@@ -23,7 +27,11 @@
 }
 
 .filter {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
 }
 
 .pagination {
