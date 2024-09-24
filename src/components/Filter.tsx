@@ -17,15 +17,16 @@ export const Filter: React.FC<{ setFilters: (filters: Filters) => void }> = ({ s
     return (
         <div className="filter">
             <TextField
+                label="Name"
                 size={'small'}
                 variant="outlined"
-                placeholder={'Enter character name'}
+                placeholder={'Character name'}
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
             <FormControl size={'small'} sx={{m: 1, minWidth: 120 }}>
-                <InputLabel id="demo-simple-select-label">Choose status</InputLabel>
-                <Select value={status} label={'Choose status'} onChange={(e) => setStatus(e.target.value)}>
+                <InputLabel id="demo-simple-select-label">Status</InputLabel>
+                <Select value={status} label={'Status'} onChange={(e) => setStatus(e.target.value)}>
                 <MenuItem value="alive">Alive</MenuItem>
                 <MenuItem value="dead">Dead</MenuItem>
                 <MenuItem value="unknown">Unknown</MenuItem>
