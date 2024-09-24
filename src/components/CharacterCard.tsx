@@ -1,14 +1,14 @@
 import {Character} from "../types/Character.ts";
 import {FC} from "react";
-import {Card} from "@mui/material";
+import {Card, Typography} from "@mui/material";
 
 
 export const CharacterCard: FC<{character: Character}> = ({character}) => {
     return (
         <Card className={'character-card'}>
             <img src={character.image} alt={character.name}/>
-            <h2>{character.name}</h2>
-            <p>Status: {character.status}</p>
+            <Typography variant={'h5'}>{character.name}</Typography>
+            <Typography variant={'subtitle1'}>Status: {character.status}</Typography>
         </Card>
     );
 };
