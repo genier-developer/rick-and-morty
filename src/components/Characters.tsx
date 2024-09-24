@@ -9,7 +9,7 @@ interface Filters {
     status: string;
 }
 
-const Characters: React.FC<{ filters: Filters }> = ({ filters }) => {
+export const Characters: React.FC<{ filters: Filters }> = ({ filters }) => {
     const [page, setPage] = useState(1);
 
     const { data, isLoading, isError } = useGetCharactersQuery({ page, ...filters });
@@ -32,4 +32,3 @@ const Characters: React.FC<{ filters: Filters }> = ({ filters }) => {
     );
 };
 
-export default Characters;
